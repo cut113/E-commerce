@@ -3,7 +3,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase.config";
 
 const useAuth = () => {
-
+    console.log("useAuth");
     const [currentUser, setCurrentUser] = useState({});
 
     useEffect(() => {
@@ -16,9 +16,9 @@ const useAuth = () => {
         });
     })
 
-    return (
-        currentUser
-    );
+    return {
+        currentUser,
+    };
 };
 
 export default useAuth;

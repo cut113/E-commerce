@@ -3,7 +3,7 @@ import useAuth from '../custom-hooks/useAuth';
 import { Navigate } from "react-router-dom";
 
 const ProtectedRoute = ({ children }) => {
-
+    console.log("ProtectedRoute");
     const { currentUser } = useAuth();
 
     return currentUser ? children : <Navigate to="/login" />;
