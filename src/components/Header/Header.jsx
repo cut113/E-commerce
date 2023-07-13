@@ -78,8 +78,8 @@ const Header = () => {
 
   const toggleProfileActions = () => {
     profileActionRef.current.classList.toggle("show__profileActions");
+    console.log("clicked");
   };
-
   return (
     <header className="header" ref={headerRef}>
       <Container>
